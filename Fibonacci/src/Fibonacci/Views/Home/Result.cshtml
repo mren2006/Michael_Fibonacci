@@ -1,0 +1,27 @@
+﻿
+@using Fibonacci.Models
+@{
+    ViewBag.Title = "Result";
+}
+
+@using (Html.BeginForm("Result","Home"))
+{
+    <div>
+      
+        <h2>@Html.Label(" F(n) = F(n-1) + F(n-2)")</h2>
+
+        <h2>@Html.Label("n = ") : @Html.TextBox("num")</h2>
+    </div>
+      
+    <div>
+        
+        <h2>@Html.Label("Result of Iterative Approach") : </h2>
+
+        <h2>
+            @Html.TextBox("Iteration") </h2>
+            <h2>@Html.Label("Result of Recursive Approach") :</h2>
+        <h2> @Html.TextBox("Recursion")</h2> 
+
+</div>
+   
+}

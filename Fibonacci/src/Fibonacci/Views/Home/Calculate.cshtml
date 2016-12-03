@@ -1,9 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Calculate";
+﻿
+@using Fibonacci.Models
+@{
+    ViewBag.Title = "Calculate";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
 
-<p> Use this area to provide UI to calculate Fibonacci </p>
+@using (Html.BeginForm("Result","Home"))
+{
+    <div>
+        <h2>@Html.Label(" Enter Fibonacci number")</h2>
+        
+       <h2>  F(n) = F(n-1) + F(n-2) </h2>
 
 
+
+        <h2>@Html.Label("n = ") : @Html.TextBox("num")</h2>
+
+
+    </div>
+   
+    <input type="submit" name="Result" value="Calculate Fibonacci" />
+}
