@@ -26,4 +26,4 @@ On Azure web Site, people can also configure the release management process so t
 
 Both approaches will be discussed with the technical Consultant and practice manager.
 
-This is just a work excerise, so these approaches are not implemented now. 
+
