@@ -30,7 +30,7 @@ namespace Fibonacci.Controllers
 
             F.Iteration = FiboIteration(n);
 
-            F.Recursion = FiboRecursion(n);
+            F.Recursion = FiboRecursiveOpt(n);
 
             return View(F);
 
@@ -64,10 +64,32 @@ namespace Fibonacci.Controllers
 
             return FiboRecursion(n - 1) + FiboRecursion(n - 2);
         }
-        
+
+        Dictionary<int, int> resultHistory = new Dictionary<int, int>();
+
+
+        //Optimized recursive method
+        int FiboRecursiveOpt(int n)
+        {
+            if (n == 0) return 0;
+            if (n == 1) return 1;
+            if (resultHistory.ContainsKey(n))
+                return resultHistory[n];
+
+            int result = FiboRecursiveOpt(n - 1) + FiboRecursiveOpt(n - 2);
+            resultHistory[n] = result;
+
+            return result;
+        }
+
+
+
         public IActionResult Error()
         {
             return View();
         }
     }
+
+   
+
 }
