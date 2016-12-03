@@ -10,7 +10,13 @@ want to try, the web page will show you the result for both iteration approach a
 
 approach takes too many resources the performance was really slow when calculating F(30) and higher number, it is optimized by using 
 
-Dictionary to store the historical result and improved the performance.
+Dictionary to store the historical result and improved the performance. The performance is improved tremendensly after using the dictionary check to store the historic result for recursive approach. 
+
+The calculation class is a public static class which means that it can be accessed from any project inside the solution, Azure web applicaton and the testing project.
+
+Unit Testing project is added for developers to test the calculation result for all three methods (Iteration, Recursion and Optimized Recursion) with VS tools.
+
+Since the solution is implemented using .Net Core, it is portable and can be deployed into Windows, Mac OS and Linux systems and will be a standalone solution, which is independent from any other system/application/Frameworks. The Azure web site has visula accessf for end users/Business stakeholders and they can access the web site from anywhere, on any device.
 
 This Azure Web Site can be used for testing purpose to check if both Solution return same result.
 
